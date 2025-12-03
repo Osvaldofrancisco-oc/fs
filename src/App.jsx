@@ -11,7 +11,6 @@ const ListNomeFamilia = () =>{
     </div>
   )
 }
-
 const Hello = (props) => {
   console.log(props)
   return (
@@ -20,7 +19,6 @@ const Hello = (props) => {
     </div>
   )
 }
-
 const App = () => {
   // console.log('Hello from componente')
   const now = new Date()
@@ -42,5 +40,4 @@ const App = () => {
   </div>
 )
 }
-
 export default App
