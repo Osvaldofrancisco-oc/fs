@@ -1,43 +1,30 @@
-const ListNomeFamilia = () =>{
+const Hello = ({name, age}) => {
   
-  const listName = ['Osvaldo','Conceição','Domingos']
+  console.log({name, age})
+  const bornYear = () =>{
+    const yearNow = new Date().getFullYear()
+    return yearNow - age
+  }
+  return (
+    <div>
+      <p>Hello {name}, you are {age} years old!</p>
+      <p>So you  were probably born in {bornYear()}</p>
+    </div>
+  )
 
-  return (
-    <div>
-      <ul>
-        {listName.map((nome) => <li key={nome.toString()}>{nome}</li>)}
-      </ul>
-      <li></li>
-    </div>
-  )
 }
-const Hello = (props) => {
-  console.log(props)
-  return (
-    <div>
-      <p>Hello {props.name}, you are {props.age} years old!</p>
-    </div>
-  )
-}
-const App = () => {
-  // console.log('Hello from componente')
-  const now = new Date()
-  const a = 19
-  const b = 21
-  console.log(now, a + b)
-  // const name = 'Peter'
-  // const age = 24
-  return (
-    
-  <div>
-    <p>Hello world, it´s {now.toString()}</p>
-    <p>{a} + {b} is {a + b}</p>
-    <h1>Osvaldo Canhama</h1>
+
+const App = () =>{
+
+  const name = 'Osvaldo'
+  const age = '24'
+
+  return(
+    <>
     <p>Greetings</p>
-    <Hello name='Donilson Canhama' age={1 + 0}/>
-    {/* <Hello name={name} age={age}/> */}
-    <ListNomeFamilia/>
-  </div>
-)
+    <Hello name = "Canhama" age = {12 + 11}/>
+    <Hello name = {name} age = {age}/>
+    </>
+  )
 }
 export default App
